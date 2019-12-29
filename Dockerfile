@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
         postgresql-client libpq-dev \
         libonig-dev \
         libzip-dev \
-        php-bcmath \
+        php7.4-bcmath \
         git \
         curl \
         wget \
