@@ -22,7 +22,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) mbstring zip xml  pdo_mysql pdo_pgsql \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && docker-php-ext-install opcache 
+    && docker-php-ext-install opcache \
+    && rm -r /var/lib/apt/lists/*
 
 
 RUN wget https://getcomposer.org/installer -O - -q \
